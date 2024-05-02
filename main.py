@@ -1,3 +1,13 @@
+import Levenshtein
+
+def similar(str1, str2):
+    str1 = str1 + ' ' * (len(str2) - len(str1))
+    str2 = str2 + ' ' * (len(str1) - len(str2))
+    return sum(1 if i == j else 0
+               for i, j in zip(str1, str2)) / float(len(str1))
+
+
+
 print ("Hi my name is CLOUD and im your bank's friendly chatbot. How may I help you today?")
 print (" ")
 print (" ")
@@ -78,5 +88,17 @@ responses= { "hello" : "Hi there!",
 
 response = input("> ")
 response = response.lower()
-if response in responses : 
-    print (responses[response])
+
+    
+best_response=" "
+best_score=0
+
+for key in responses:
+    score=Levenshtein.ratio(key,response)
+    if score > best_score: 
+        best_score=score
+        best_response=responses[key]
+        
+print(best_response)
+        
+print( similar("what is your name", "what's your name") )
