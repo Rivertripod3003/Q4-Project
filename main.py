@@ -28,7 +28,7 @@ responses= { "hello" : "Hi there!",
             "i lost my credit card" : "I've ordered a new one for you",
             "i can't get into my account" : "You can reset your password under the Forgot Password section on the login page",
             "my card has been stolen" : "I have cancelled that card and ordered a new one for you",
-            "how do i check the funds in my account" : "You may either come into one of our locations or download our banking app",
+            "how do i check the funds in my account" : "You have $3.49 because you're broke",
             "can i speak to a sales representitive" : "Sure let me forward you to a representitive now",
             "how do i transfer funds from my account" : "You will need to use our app for a transfer",
             "how do i open a savings account" : "you will need to talk to an associate. I'll forward you now",
@@ -79,26 +79,46 @@ responses= { "hello" : "Hi there!",
             "is your bank better than others?" : "Most definitly we are the best!",
             "what benifits do you offer" : "we offer fly miles, car insurance assistance and 20% off all coffee",
             "why am i broke" : "Get yo money up",
+            "will harout present today" : "Hmmmmm I doubt it",
+            "do you have a mobile app" : "Yes you can download our app from the store",
+            "where are your bank branches" : "You can find all of our locations on Google maps",
+            "can i use an atm for free" : "Yes you may use anyone of our atm's anytime for free",
+            "ive lost my account number can you help me" : "Sure you can reset your account number in our app!",
+            "what is this" : "A chatbot",
+            "how are you" : "Good how are you?",
+            "how can i withdraw money from my account" : "You can withdraw money through one of our atm's",
+            "what do you think about ai" : "Ai is terrifying and it might destroy the world",
+            "credit score" : "Your credit score is 600",
+            "do you like harout" : "Not really",
+            "fine thank you" : "Nice",
+            "who is harout" : "A strong little man",
+            "what is a chatbot" : "I am a chatbot and I'm here to answer all of your questions",
+            "who is mr williams" : "He is our great teacher who will give me a good grade on this project",
+            
+            
+            
+            
+            
             
             
             
             
             }
 
-
-response = input("> ")
-response = response.lower()
-
+while True:
+    response = input("> ")
+    response = response.lower()
     
-best_response=" "
-best_score=0
-
-for key in responses:
-    score=Levenshtein.ratio(key,response)
-    if score > best_score: 
-        best_score=score
-        best_response=responses[key]
         
-print(best_response)
+    best_response=" "
+    best_score=0
+    
+    for key in responses:
+        score=Levenshtein.ratio(key,response)
+        if score > best_score: 
+            best_score=score
+            best_response=responses[key]
+            
+    print(best_response)
         
 print( similar("what is your name", "what's your name") )
