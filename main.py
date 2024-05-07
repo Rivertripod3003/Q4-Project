@@ -14,7 +14,7 @@ print (" ")
  
  
  
-print ("Try typing Hello or I can't get into my account type something...")
+print ("Try typing {Hello} or {I can't get into my account} type something...")
 
 
 responses= { "hello" : "Hi there!",
@@ -126,16 +126,18 @@ responses= { "hello" : "Hi there!",
             "how do I dispute a transaction on my account?": "You can dispute a transaction by contacting our customer service department nd providing details of the disputed transaction We will investigate the matter and work to resolve it promptly.",
             "can I order checks for my account?": "Yes, you can order checks for your account through our app or by contacting customer service There may be a fee associated with ordering checks",
             "how do I enroll in paperless statements?": "You can enroll in paperless statements through the settings section of our app or by contacting customer service. Paperless statements are convenient, secure, and environmentally friendly.",
+            "yo" : "Wussup",
+            "where are you from" : "I'm from the BHS CS lab",
+            "Where is your bank located" : "We have multiple locations all over the US",
+            "can i get a 401k" : "Sure! to setup a 401k you need to visit one of our branches",
+            "i need help with my account" : "Sure what do you need help with?",
+            "I need a loan" : "Sure how much do you need?",
+            
+            
+            
+            
 
 
-
-            
-            
-            
-            
-            
-            
-            
             
             
             
@@ -144,6 +146,11 @@ responses= { "hello" : "Hi there!",
 while True:
     response = input("> ")
     response = response.lower()
+    
+    if response=="done":
+        print("Thanks! What would you rate our service on a scale of 1-5?")
+        break
+
     
         
     best_response=" "
@@ -157,4 +164,5 @@ while True:
             
     print(best_response)
         
-print( similar("what is your name", "what's your name") )
+if input=="1":
+    print("Oh no we're sorry to hear that")
