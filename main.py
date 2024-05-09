@@ -7,7 +7,8 @@ def similar(str1, str2):
                for i, j in zip(str1, str2)) / float(len(str1))
 
 
-
+print (" ")
+print (" ")
 print ("Hi my name is CLOUD and im your bank's friendly chatbot. How may I help you today?")
 print (" ")
 print (" ")
@@ -15,7 +16,9 @@ print (" ")
  
  
 print ("Try typing {Hello} or {I can't get into my account} type something...")
-
+print (" ")
+print (" ")
+print ("When you're finished type {done} to close the bot")
 
 responses= { "hello" : "Hi there!",
             "hi" : " Hello there!",
@@ -120,7 +123,7 @@ responses= { "hello" : "Hi there!",
             "can I access my account from overseas?": "Yes, you can access your account from overseas through our online banking portal or by calling our international customer service number",
             "what music do you like" : "Not Travis Scott because Harout likes it",
             "how do I close my account?": "You can close your account by visiting one of our branches and completing an acount closure form or by contacting cutomer service for assistance",
-            "how old are you" : "I'm almost 2 months off",
+            "how old are you" : "I'm almost 2 months old",
             "whats your favorite food" : "I love burgers",
             "can you do my computer science project" : "Nope",
             "how do I dispute a transaction on my account?": "You can dispute a transaction by contacting our customer service department nd providing details of the disputed transaction We will investigate the matter and work to resolve it promptly.",
@@ -132,6 +135,7 @@ responses= { "hello" : "Hi there!",
             "can i get a 401k" : "Sure! to setup a 401k you need to visit one of our branches",
             "i need help with my account" : "Sure what do you need help with?",
             "I need a loan" : "Sure how much do you need?",
+            "is my account on hold" : "No your account is fully active",
             
             
             
@@ -161,8 +165,23 @@ while True:
         if score > best_score: 
             best_score=score
             best_response=responses[key]
-            
-    print(best_response)
-        
-if input=="1":
-    print("Oh no we're sorry to hear that")
+    
+    if best_score<.3:
+        print("Sorry I don't quite understand what you're asking me")
+    
+    else: print(best_response)
+userinput=input()   
+if userinput=="1":
+    print("Thanks for your feedback! We're sorry to hear that. We are constantly updating and improving")
+    
+if userinput=="2":
+    print("Sorry to hear that we hope your experience will be better next time")
+    
+if userinput=="3":
+    print("Thanks for your feedback! We're constantly improving!")
+
+if userinput=="4":
+    print("Great! We're glad that we were able to give you a satisfactory experience")
+
+if userinput=="5":
+    print("Thanks for your feedback! ")
