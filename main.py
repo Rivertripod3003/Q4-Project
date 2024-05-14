@@ -7,6 +7,9 @@ def similar(str1, str2):
                for i, j in zip(str1, str2)) / float(len(str1))
 
 
+print ('''                     _                    _          
+ /_/ _  _ _    _/_  /_` _    . _  _   _  /_) _  _  /_
+/ / /_|/ /_//_//   ._/ /_||// / //_/_\  /_) /_|/ //\ ''')
 print (" ")
 print (" ")
 print ("Hi my name is CLOUD and im your bank's friendly chatbot. How may I help you today?")
@@ -136,6 +139,19 @@ responses= { "hello" : "Hi there!",
             "i need help with my account" : "Sure what do you need help with?",
             "I need a loan" : "Sure how much do you need?",
             "is my account on hold" : "No your account is fully active",
+            "what is your job" : "I am a chatbot",
+            "how do i find an atm" : "You should try your phone's map service",
+            "who are you" : "Cloud!",
+            "help" : "What do you need help with?",
+            "my account is broken" : "Oh no what seems to be the issue",
+            "i need some assistance" : "Sure how may I assist you?",
+            "how much money is in my account" : "You have $1265.37 in your checking account",
+            "what is my credit score" : "Your credit score is 600",
+            "thanks" : "No problem",
+            "will harout finish his project" : "Def not",
+            "can you do my taxes" : "no",
+            
+            
             
             
             
@@ -166,7 +182,7 @@ while True:
             best_score=score
             best_response=responses[key]
     
-    if best_score<.3:
+    if best_score<.6:
         print("Sorry I don't quite understand what you're asking me")
     
     else: print(best_response)
@@ -185,3 +201,9 @@ if userinput=="4":
 
 if userinput=="5":
     print("Thanks for your feedback! ")
+      
+
+
+            
+            
+        
